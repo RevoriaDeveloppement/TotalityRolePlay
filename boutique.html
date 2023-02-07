@@ -13,15 +13,26 @@
 
 <body>
 	<header>
+        <!-- menu responsive -->
+        
+        <div class="menu_toggle">
+            <span></span>
+        </div>
+
+        <div class="logo">
+            <p><span>Présentation</span>VIP</p>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Description VIP</a></li>
+            <li><a href="#">Catalogue Véhicule</a></li>
+            <li><a href="immo.html">Catalogue Immobilier</a></li>
+			<li class="buy_li"><a href="https://discord.gg/xGJMmxUDD6">Devenir VIP</a></li>
+        </ul>
+    </header>
+	<header2>
 		<!-- ----Barre de Navigation -->
-		<nav>
-			<h1>Totality RolePlay</h1>
-			<div class="right">
-				<a href="index.html"><button>Accueil</button></a>
-				<a href="https://discord.gg/xGJMmxUDD6"><p>Discord</p></a>
-				<a href="boutique.css"><p>PASS_VIP</p></a>
-			</div>
-		</nav>
+
 
 			<!-- Présentation du site  -->
 		<section class="presentation first">
@@ -71,8 +82,7 @@
 			</p>
 			<p class="prixpromo"> Accès au Concessionnaire VIP 
 				avec la possibilité de crée vôtre logement a n'importe quel endroit de la carte </p>
-			<a href="https://discord.gg/QpMqXS6TJv"><button>Discord</button></a>
-			<a href="mailto:revoriadeveloppement@gmail.com"><button>Email</button></a>
+			<a href="https://www.paypal.com/paypalme/RevoriaDeveloppement?country.x=FR&locale.x=fr_FR"><button>Devenir VIP</button></a>
 		</div>
 		<div class="image-presentation">
 			<img src="vip.png" />
@@ -80,12 +90,21 @@
 	</section>
 
 		<!-- Pied de Page -->
-	<footer>
-		<div class="column">
-			<h3>Totality RolePlay</h3>
-		</div>
-		<div class="column">
-			<h3>Copyright @2023RevoriaDeveloppement</h3>
-		</div>
-	</footer>
+		<footer>
+			<p>@RevoriaDeveloppement Copyright 2023 </p>
+		</footer>
+	<script>
+        //menu responsive code JS
+
+        var menu_toggle = document.querySelector('.menu_toggle');
+        var menu = document.querySelector('.menu');
+        var menu_toggle_span = document.querySelector('.menu_toggle span');
+
+        menu_toggle.onclick = function(){
+            menu_toggle.classList.toggle('active');
+            menu_toggle_span.classList.toggle('active');
+            menu.classList.toggle('responsive') ;
+        }
+
+    </script>
 </body>
